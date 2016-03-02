@@ -7,6 +7,8 @@ dependencies:
     - wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
     - sudo apt-get update
     - sudo apt-get install elixir
+    - yes | mix local.hex
+    - yes | mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
     - yes | mix deps.get
 
 test:
