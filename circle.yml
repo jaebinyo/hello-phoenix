@@ -1,6 +1,7 @@
 machine:
   environment:
     GCLOUD_PROJECT: "pubsub-1220"
+    PATH: "$HOME/dependencies/erlang/bin:$HOME/dependencies/elixir/bin:$PATH"
 
 dependencies:
   pre:
