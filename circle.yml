@@ -9,12 +9,15 @@ dependencies:
     - gcloud auth activate-service-account --key-file ${HOME}/client-secret.json
     - gcloud config set project $GCLOUD_PROJECT
     - gcloud compute instances list
-    - wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
-    - sudo apt-get update
-    - sudo apt-get install elixir
+    #- wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
+    #- sudo apt-get update
+    #- sudo apt-get install elixir
+    - scripts/ci-prepare.sh
     - mix local.hex --force
     - mix local.rebar --force
     - mix deps.get
+  cache_directories:
+    - ~/dependencies
 
 test:
   override:
