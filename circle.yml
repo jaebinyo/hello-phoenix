@@ -5,11 +5,10 @@ machine:
 
 dependencies:
   pre:
-    - echo $CLIENT_SECRET | base64 --decode > ${HOME}/client-secret.json
-    - gcloud --quiet components update app
-    - gcloud auth activate-service-account --key-file ${HOME}/client-secret.json
-    - gcloud config set project $GCLOUD_PROJECT
-    - gcloud compute instances list
+    #- echo $CLIENT_SECRET | base64 --decode > ${HOME}/client-secret.json
+    #- gcloud --quiet components update app
+    #- gcloud auth activate-service-account --key-file ${HOME}/client-secret.json
+    #- gcloud config set project $GCLOUD_PROJECT
     #- wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
     #- sudo apt-get update
     #- sudo apt-get install elixir
